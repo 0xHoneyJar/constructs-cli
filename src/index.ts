@@ -282,6 +282,24 @@ ${dim("https://constructs.network")}
 
 // ─── Main ────────────────────────────────────────────────────────────────────
 
+// ─── Deprecation pointer (the fold, loa-constructs cycle constructs-launcher-cli) ───
+//
+// This tool is superseded by the `constructs` capability binary in
+// 0xHoneyJar/loa-constructs (packages/constructs-cli): zero runtime deps,
+// deterministic JSON on stdout, an exit-code dictionary, capabilities/robot-docs
+// self-description, and discoverability through the `loa` launcher.
+//
+// Behavior here is UNCHANGED — the pointer goes to stderr and every command still
+// runs. This repo's git-native, no-auth install lane lives on as the offline rung
+// of the new binary's source-of-truth ladder (it was absorbed, not deleted).
+//
+// Silence: CONSTRUCTS_SILENCE_DEPRECATION=1
+if (!process.env.CONSTRUCTS_SILENCE_DEPRECATION) {
+  console.error(
+    "note: constructs-cli is superseded by the `constructs` capability binary in 0xHoneyJar/loa-constructs (packages/constructs-cli). This tool still works; the new one is agent-first (deterministic JSON, exit-code dictionary, `constructs robot-docs guide`). Silence with CONSTRUCTS_SILENCE_DEPRECATION=1."
+  );
+}
+
 const args = process.argv.slice(2);
 const command = args[0];
 const target = args[1];

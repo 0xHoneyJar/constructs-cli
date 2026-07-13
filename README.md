@@ -1,4 +1,19 @@
-# constructs-cli
+# constructs-cli — SUPERSEDED
+
+> **This tool has been folded into [`0xHoneyJar/loa-constructs`](https://github.com/0xHoneyJar/loa-constructs).**
+>
+> Its successor is the `constructs` capability binary at `packages/constructs-cli`
+> — zero runtime dependencies, deterministic JSON on stdout, a published exit-code
+> dictionary, `capabilities --json` + `robot-docs guide` self-description, and
+> discoverability through the `loa` launcher.
+>
+> **This repo still works.** Nothing was unpublished and nothing was deleted: the
+> git-native, no-auth install lane you came here for was *absorbed* — it is now the
+> offline rung of the new binary's source-of-truth ladder. Every command here still
+> runs and prints a pointer on stderr (silence with `CONSTRUCTS_SILENCE_DEPRECATION=1`).
+>
+> Migration note (with rollback criteria): `docs/migration-constructs-cli-fold.md`
+> in loa-constructs.
 
 Install AI expertise packs for Claude Code. No account needed.
 
